@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-accent-color: #F88500;
+    --main-text-color: #333333;
+    --main-dark-color: #202328;
+    --main-deep-color: #171A1A;
+    --main-dark-header-color: #6F7A8B;
+    --main-dark-div-color: #2D3038;
+    --main-light-bg-color: #FAFAFA;
+    --main-light-disabled-color: #E4E6E8;
+    --main-light-div-color: #E7E7E8;
+    --main-middle-gray-color:rgba(111, 122, 139, 0.75);
+    --main-text-light-color: #999999;
+}
+
+.header__bottom-line {
+    margin: 0 auto;
+    width: 95.5%;
+    height: 1px;
+    background-color: red;
+}
