@@ -18,6 +18,10 @@
     --main-text-light-color: #999999;
 }
 
+html {
+    font-family: ;
+}
+
 .header__bottom-line {
     margin: 0 auto;
     width: 95.5%;
@@ -40,4 +44,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    position: relative;
+    padding-left: 22px;
+    color: #ffffff;
+    opacity: 0.45;
+}
+
+.logo__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo__title {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo__text {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.24;
+    text-transform: none;
 }
