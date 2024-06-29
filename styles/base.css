@@ -124,10 +124,16 @@ html {
 }
 
 .hero {
-    height: 80vh;
+    height: 650px;
     background-color: var(--main-dark-color);
 }
 
 .hero__container {
     padding: 10px;
+    height: 100%;
+}
+
+.hero__container-img {
+    border-color: rgba(32, 35, 40, 0.1);
+    border-radius: 10px;
 }
