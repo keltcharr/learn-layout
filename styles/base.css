@@ -40,6 +40,7 @@ html {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
 .header__container {
@@ -124,16 +125,123 @@ html {
 }
 
 .hero {
-    height: 650px;
+    /* height: 650px; */
     background-color: var(--main-dark-color);
 }
 
 .hero__container {
     padding: 10px;
+    height: 650px;
+}
+
+.hero__slide {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero__slider {
     height: 100%;
 }
 
-.hero__container-img {
-    border-color: rgba(32, 35, 40, 0.1);
-    border-radius: 10px;
+.hero__slide-wrapper {
+    position: relative;
+}
+
+.hero__slide-img {
+    width: 100%;
+    height: 100%;
+    filter: contrast(1.50);
+    object-fit: cover;
+}
+
+.hero__slide-img-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.15;
+    background-color: var(--main-dark-color);
+}
+
+.slider-control {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:36.32px 33.5px 36.32px 28.5px ;
+}
+
+.hero__slider-control {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 440px;
+    height: 90px;
+    gap: 40px;
+    border-top-left-radius: 10px;
+    background-color: var(--main-dark-color);
+    z-index: 1;
+}
+
+.trust {
+    background-color: var(--main-deep-color);
+    height: 249px;
+}
+
+.trust__container {
+    padding: 54px 20px 53px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-dark-header-color);
+}
+
+.trust__container-content {
+    height: 142px;
+    width: 740px;
+}
+
+.trust__header {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.trust__line {
+    position: relative;
+    left: -260px;
+    margin: 15px auto 16px;
+    width: 221px;
+    height: 1px;
+    background-color: var(--main-dark-div-color);
+}
+
+.container__trust-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    font-size: 14px;
+}
+
+.item-num {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.trust__container-right {
+    width: 360px;
+    height: 161px;
+    position: relative;
+}
+
+.right-text {
+    font-size: 14px;
+}
+
+.right-phone {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: #fff;
+    margin: 6px 0px 16px;
 }

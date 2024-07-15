@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/base.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <script src="./styles/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/sliderScript.js" defer></script>
   </head>
   <body>
     <div class="header container">
@@ -104,9 +113,105 @@
     <section class="hero">
       <div class="container">
         <div class="hero__container">
-          <img class="hero__container-img" src="./image/slider-img.jpg" alt="slider-img.jpg">
+          <div class="swiper hero__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero__slide">
+                <div class="hero__slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_1"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <div class="hero_slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_2"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <div class="hero_slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_3"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control hero__slider-control">
+              <div class="slider__num">01|03</div>
+              <div class="slider-control__scrollbar">
+                <div class="swiper-scrollbar"></div>
+              </div>
+              <div class="slider-control__button">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <section class="trust">
+      <div class="trust container">
+        <div class="trust__container">
+          <div class="trust__container-content">
+            <div class="trust__header">Нам доверяют</div>
+            <div class="trust__line"></div>
+            <div class="container__trust-item">
+              <div class="grid-item">
+                <span class="item-num">860</span> клиентов по всему миру
+              </div>
+              <div class="">
+                <span class="item-num">23</span> надёжных партнёна
+              </div>
+              <div class="">
+                <span class="item-num">12</span> поставщиков
+              </div>
+              <div class="">
+                <span class="item-num">36</span> лучших франчайзи
+              </div>
+              <div class="">
+                <span class="item-num">108</span> производителей мебели
+              </div>
+              <div class="">
+                <span class="item-num">85</span> сотрудников
+              </div>
+              <div class="">
+                <span class="item-num">38</span> пернатых попугаев
+              </div>
+              <div class="">
+                <span class="item-num">256</span> восьмибитных цветов
+              </div>
+              <div class=""></div>
+            </div>
+          </div>
+          <div class="trust__container-right">
+            <div class="right-text">
+              Позвоните нам или оставьте заявку с сайта. <br>
+              Мы перезвоним вам в течение 10 минут.
+            </div>
+            <div class="right-phone">+7 (499) 246-75-32</div>
+            <button class="right-button">Оформить заявку сейчас</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="bestworks">
+      <div class="bestworks container">
+        <div class="bestworks__container-bg">
+          <div class="top-bg"></div>
+          <div class="bottom-bg"></div>
+        </div>
+      </div>
+    </section> -->
   </body>
 </html>
