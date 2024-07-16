@@ -189,7 +189,7 @@ html {
 }
 
 .trust__container {
-    padding: 54px 20px 53px 80px;
+    padding: 45px 80px 43px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -229,13 +229,20 @@ html {
 }
 
 .trust__container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    text-align: right;
     width: 360px;
     height: 161px;
-    position: relative;
+    gap: 16px;
 }
 
 .right-text {
     font-size: 14px;
+    font-weight: 400;
+    line-height: 165%;
 }
 
 .right-phone {
@@ -243,5 +250,29 @@ html {
     font-size: 28px;
     font-weight: 300;
     color: #fff;
-    margin: 6px 0px 16px;
+}
+
+.right-button {
+    width: 262px;
+    height: 44px;
+    border: 0;
+    justify-content: e;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--main-accent-color);
+}
+
+.button-text {
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.right-button:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+    cursor: pointer;
 }
