@@ -231,7 +231,6 @@ html {
 .trust__container-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-content: flex-end;
     text-align: right;
     width: 360px;
@@ -256,7 +255,7 @@ html {
     width: 262px;
     height: 44px;
     border: 0;
-    justify-content: e;
+    justify-content: flex-end;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background-color: var(--main-accent-color);
@@ -275,4 +274,9 @@ html {
 .right-button:hover {
     background-color: rgba(196, 196, 196, 0.2);
     cursor: pointer;
+}
+
+.bestwork {
+    height: 730px;
+    background: conic-gradient(#202328 0deg 90deg, #FAFAFA 90deg 270deg, #202328 270deg 360deg);
 }
