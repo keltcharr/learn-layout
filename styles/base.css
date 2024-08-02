@@ -44,6 +44,9 @@ html {
 }
 
 .button {
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 800;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: none;
@@ -55,7 +58,7 @@ html {
 }
 
 .button:hover {
-    background-color: #ffa136;
+    background-color: #ff951d;
     cursor: pointer;
 }
 
@@ -285,7 +288,125 @@ html {
 .trust-right__button {
     width: 262px;
     height: 44px;
-    padding: 12px 30px;
+}
+
+.bestwork {
+    background: linear-gradient(var(--main-dark-color) 50%, var(--main-light-bg-color) 50%);
+}
+
+.bestwork__container {
+    height: 730px;
+    padding: 62px 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 47px;
+}
+
+.bestwork-top {
+    width: 932px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.bestwork-top__info {
+    width: 417px;
+    height: 98px;
     font-size: 14px;
+    font-weight:400;
+    line-height: 1.7;
+    color: #fff;
+    text-align: right;
+}
+
+.bestwork-top__line {
+    width: 1px;
+    height: 120px;
+    background-color: var(--main-dark-div-color);
+}
+
+.bestwork-top__heading {
+    width: 419px;
+    height: 100px;
+}
+
+.heading__text {
+    margin-bottom: 27px;
+    font-size: 16px;
     font-weight: 800;
+    text-transform: uppercase;
+    color: var(--main-accent-color);
+}
+
+.heading__header {
+    font-size: 29px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.bestwork-items {
+    width: 1116px;
+    height: 345px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.bestwork-items__item {
+    width: 360px;
+    height: 341px;
+    background-color: #fff;
+}
+
+.items-img {
+    width: 360px;
+    height: 200px;
+}
+
+.items-info {
+    padding: 25px 25px 30px 30px;
+}
+
+.items-map {
+    width: 277px;
+    height: 26px;
+    position: relative;
+}
+
+.items-map__icon {
+    display: inline;
+    width: 12px;
+    height: 16px;
+}
+
+.items-map__adres {
+    display: inline;
+    padding-left: 11px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #989da5;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.items-heading__header {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-text-color);
+    line-height: 1.25;
+}
+
+.bestwork-items__line {
+    width: 360px;
+    height: 3px;
+    background-color: var(--main-light-disabled-color);
+}
+
+.bestwork-link {
+    width: 170px;
+    height: 44px;
 }
