@@ -350,6 +350,7 @@ html {
 .bestwork-items {
     width: 1116px;
     height: 345px;
+    margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
     column-gap: 16px;
@@ -407,6 +408,9 @@ html {
 }
 
 .bestwork-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 44px;
 }
