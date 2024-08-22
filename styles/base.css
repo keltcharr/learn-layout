@@ -687,3 +687,8 @@ html {
 .partners-logo {
     margin-bottom: 32px;
 }
+
+.footer {
+    height: 100px;
+    background-color: #171A1A;
+}
