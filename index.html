@@ -1,17 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/base.css">
-</head>
-<body>
-    <header>
-        <p>Header</p>
-        <div class="header__bottom-line"></div>
-        <div></div>
-    </header>
-    <section>Hero</section>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <script src="./styles/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/sliderScript.js" defer></script>
+  </head>
+  <body>
+    <div class="header container">
+      <div class="header__container">
+        <div class="logo header__logo">
+          <img
+            class="logo__icon"
+            src="./image/icons/logo-icon.svg"
+            alt="logo-icon"
+          />
+          <p class="logo__title">
+            woodtech<br />
+            <span class="logo__text">Architecture</span>
+          </p>
+        </div>
+        <div class="header__menu">
+          <a
+            class="header__menu-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Главная</a
+          >
+          <a
+            class="header__menu-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Услуги</a
+          >
+          <a
+            class="header__menu-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Блог</a
+          >
+          <a
+            class="header__menu-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Компания</a
+          >
+          <a
+            class="header__menu-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Проекты</a
+          >
+        </div>
+        <div class="header__social">
+          <a
+            class="header__social-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./image/icons/instagram.svg" alt="instagram" />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./image/icons/vk.svg" alt="vk" />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./image/icons/fb.svg" alt="fb" />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./image/icons/tw.svg" alt="tw" />
+          </a>
+        </div>
+      </div>
+      <div class="header__bottom-line"></div>
+    </div>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__container">
+          <div class="swiper hero__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero__slide">
+                <div class="hero__slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_1"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <div class="hero_slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_2"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <div class="hero_slide-wrapper">
+                  <img
+                    class="hero__slide-img"
+                    src="./image/slider-img.jpg"
+                    alt="slide_3"
+                  />
+                  <div class="hero__slide-img-cover"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control hero__slider-control">
+              <div class="slider__num">01|03</div>
+              <div class="slider-control__scrollbar">
+                <div class="swiper-scrollbar"></div>
+              </div>
+              <div class="slider-control__button">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trust">
+      <div class="trust__container container">
+        <div class="trust-content">
+          <div class="trust-content__header">Нам доверяют</div>
+          <div class="trust-content__line"></div>
+          <div class="trust-content__items">
+            <ul class="trust-list">
+              <li class="trust-list__item">
+                <span>860 </span>клиентов по всему миру
+              </li>
+              <li class="trust-list__item">
+                <span>23 </span>надёжных партнёна
+              </li>
+              <li class="trust-list__item"><span>12 </span>поставщиков</li>
+              <li class="trust-list__item"><span>36 </span>лучших франчайзи</li>
+              <li class="trust-list__item">
+                <span>108 </span>производителей мебели
+              </li>
+              <li class="trust-list__item"><span>85 </span>сотрудников</li>
+              <li class="trust-list__item">
+                <span>38 </span>пернатых попугаев
+              </li>
+              <li class="trust-list__item">
+                <span>256 </span>восьмибитных цветов
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="trust-right">
+          <div class="trust-right__information">
+            Позвоните нам или оставьте заявку с сайта.<br />Мы перезвоним вам в
+            течение 10 минут.
+          </div>
+          <div class="trust-right__phone">+7 (499) 246-75-32</div>
+          <button class="button trust-right__button">
+            Оформить заявку сейчас
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bestworks">
+      <div class="container">
+        <div class="bestworks__container">
+          <div class="bestworks-top">
+            <p class="bestworks-top__info">
+              Представляем вам лучшие проекты, разработанные нашей командой
+              профессионалов с любовью и заботой о клиентах. Портфолио позволит
+              вам выбрать интересующий стиль, цвет дерева, фактуру, дизайн и
+              расположение элементов.
+            </p>
+            <div class="bestworks-top__line"></div>
+            <div class="bestworks-top__heading">
+              <p class="heading__text">\\ Лучшие работы</p>
+              <h3 class="heading__header">
+                Создаём тёплую атмосферу вашего отдыха
+              </h3>
+            </div>
+          </div>
+          <div class="bestworks-list">
+            <div class="bestworks-list__item">
+              <div class="bestwork__img-wrapper">
+                <div class="items__top-left-border"></div>
+                <div class="items__bottom-right-border"></div>
+                <img
+                  class="items-img"
+                  src="./image/bestwork/bg-image1.jpg"
+                  alt="bestwork-1"
+                />
+              </div>
+              <div class="items-info">
+                <div class="items-map">
+                  <i class="items-map__icon"> </i>
+                  <p class="items-map__address">
+                    Санкт-Петербург, Английский Пр.
+                  </p>
+                </div>
+                <div class="items-heading">
+                  <i class="items-heading__icon"> </i>
+                  <h3 class="items-heading__header">
+                    Современная гостиная в древесных тонах
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="bestworks-list__item">
+              <div class="bestwork__img-wrapper">
+                <div class="items__top-left-border"></div>
+                <div class="items__bottom-right-border"></div>
+                <img
+                  class="items-img"
+                  src="./image/bestwork/bg-image2.png"
+                  alt="bestwork-2"
+                />
+              </div>
+              <div class="items-info">
+                <div class="items-map">
+                  <i class="items-map__icon"> </i>
+                  <p class="items-map__address">Москва, Рублево-Успенское Ш.</p>
+                </div>
+                <div class="items-heading">
+                  <i class="items-heading__icon"> </i>
+                  <h3 class="items-heading__header">
+                    Панорамная чилаут зона для чтения и отдыха
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="bestworks-list__item">
+              <div class="bestwork__img-wrapper">
+                <div class="items__top-left-border"></div>
+                <div class="items__bottom-right-border"></div>
+                <img
+                  class="items-img"
+                  src="./image/bestwork/bg-image3.png"
+                  alt="bestwork-3"
+                />
+              </div>
+              <div class="items-info">
+                <div class="items-map">
+                  <i class="items-map__icon"> </i>
+                  <p class="items-map__address">Москва, На Якиманке</p>
+                </div>
+                <div class="items-heading">
+                  <i class="items-heading__icon"> </i>
+                  <h3 class="items-heading__header">
+                    Уютный лофт в светлых древесных тонах
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bestwork__link-wrapper">
+            <a class="link" href="#" target="_blank" rel="noopener noreferrer"
+              >Показать ещё</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <div class="about__container">
+          <div class="about-left">
+            <div class="about-left__decor"></div>
+            <img
+              class="about-left__img"
+              src="./image/about-img.png"
+              alt="about-img"
+            />
+            <div class="about-left__benefit">
+              <p class="about-left__benefit-year">32</p>
+              <p class="about-left__benefit-info">
+                года<br />
+                на рынке
+              </p>
+            </div>
+          </div>
+          <div class="about-right">
+            <div class="about__heading">
+              <p class="about__heading-text">\\ Коротко о нас</p>
+              <h3 class="about__heading-header">Проектируем и создаём <br>экологичный комфорт</h3>
+            </div>
+            <div class="about__divider">
+              <i class="about__dot-decor"></i>
+            </div>
+            <p class="about__info">
+              В работе мы используем только лучшие материалы на рынке по
+              доступным ценам. Наши специалисты подберут наиболее подходящие
+              породы дерева, специалисты по дизайну разработают готовое
+              решение.
+            </p>
+            <div class="about__items-wripper">
+              <div class="about-item">
+                <div class="about-item__heading">
+                  <img
+                    class="about-item__icon"
+                    src="./image/icons/eco.svg"
+                    alt="eco"
+                  />
+                  <h3 class="about-item__header">Безопасные материалы</h3>
+                </div>
+                <div class="about-item__line"></div>
+                <p class="about-item__info">
+                  Безопасность каждого из используемых материалов подтверждается
+                  соответствующим сертификатом европейского стандарта. Мы
+                  используем продукцию только проверенных годами брендов.
+                </p>
+                <a class="about-item__link" href="">Подробнее</a>
+              </div>
+              <div class="about-item">
+                <div class="about-item__heading">
+                  <img
+                    class="about-item__icon"
+                    src="./image/icons/wood-cut.svg"
+                    alt="wood-cut"
+                  />
+                  <h3 class="about-item__header">Качественная древесина</h3>
+                </div>
+                <div class="about-item__line"></div>
+                <p class="about-item__info">
+                  В создании неповторимых интерьеров мы используем только
+                  качественную, проверенную европейскую древесину, которая будет
+                  служить вам долгие годы, сохраняя свои качества и безупречный
+                  внешний вид.
+                </p>
+                <a class="about-item__link" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
