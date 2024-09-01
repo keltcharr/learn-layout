@@ -1,6 +1,21 @@
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
+  pagination: {
+    el: ".slider-num",
+    type: "custom",
+    renderCustom: function (swiper, current, total) {
+      const currentSlide = current < 10 ? "0" + current.toString() : current;
+      const totalSlides = total < 10 ? "0" + total.toString() : total;
+      return (
+        '<span class="slider-num__current">' +
+        currentSlide +
+        '</span><span class="slider-num__divider"></span><span class="slider-num__total">' +
+        totalSlides +
+        "</span>"
+      );
+    },
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -32,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollUp.classList.remove("scroll-up--visible");
     }
 
-    window.addEventListener("click", function() {
-      window.scrollTo({top: 0, behavior: "smooth"});
+    window.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 });
