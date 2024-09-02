@@ -1170,3 +1170,69 @@ html {
     pointer-events: all;
     cursor: pointer;
 }
+
+/* проба попап */
+
+.modal-popup {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 5000;
+}
+
+.modal-popup--visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-popup__container {
+    position: relative;
+    padding: 13px 8px;
+}
+
+.modal-popup__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-popup__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-popup__close-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-size: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.modal-popup__close-btn:hover {
+    background-color: rgb(121, 173, 190);
+}
+
+.modal-popup__text {
+    margin-bottom: 20px;
+}
+
+.modal-popup__input-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+
+.modal-popup__btn {
+    max-width: 100px;
+}

@@ -47,8 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollUp.classList.remove("scroll-up--visible");
     }
 
-    window.addEventListener("click", function () {
+    scrollUp.addEventListener("click", function () {
+      console.log(window);
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
+
+  // проба попап
+  const openPopunBtn = document.querySelector("#btn-popup");
+  const modal = document.querySelector("#my-modal");
+  const closeBtn = document.querySelector("#modal-close__btn");
+
+  openPopunBtn.addEventListener("click", function() {
+      modal.classList.add("modal-popup--visible");
+  })
+
+  closeBtn.addEventListener("click", function() {
+      modal.classList.remove("modal-popup--visible");
+  })
 });
