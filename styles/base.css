@@ -24,16 +24,6 @@ html {
     font-family: 'Raleway', Geneva, Verdana, sans-serif;
 }
 
-.header__bottom-line {
-    margin: 0 auto;
-    width: 95.5%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    opacity: 1;
-    transition: all 0.25s ease-in;
-    transition-delay: 50ms;
-}
-
 .container {
     margin: 0 auto;
     width: 100%;
@@ -155,10 +145,19 @@ html {
     text-decoration: none;
 }
 
-.header__social-link>img {
+.header__social-link > img {
     opacity: 0.75;
 }
 
+.header__bottom-line {
+    margin: 0 auto;
+    width: 95.5%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    transition: all 0.25s ease-in;
+    transition-delay: 50ms;
+}
 
 .header--sticky .header__container {
     padding: 20px 80px 17px 80px;
@@ -171,7 +170,6 @@ html {
 .header--sticky .header__bottom-line {
     opacity: 0;
     pointer-events: none;
-
 }
 
 .hero {
@@ -180,7 +178,7 @@ html {
 
 .hero__container {
     padding: 10px;
-    height: 650px;
+    max-height: 650px;
 }
 
 .hero__slide {
@@ -189,6 +187,7 @@ html {
 }
 
 .hero__slider {
+    position: relative;
     height: 100%;
 }
 
@@ -240,7 +239,6 @@ html {
 }
 
 .slider-content__subtitle {
-
     padding: 6px 16px;
     font-size: 16px;
     font-weight: 500;
@@ -358,38 +356,46 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    column-gap: 20px;
 }
 
-.trust-content {
-    position: relative;
+/* .trust-content {
     width: 740px;
     height: 142px;
-}
+} */
 
 .trust-content__header {
+    position: relative;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--main-dark-header-color);
+    margin-bottom: 30px;
 }
 
-.trust-content__line {
+.trust-content__header::after {
+    position: absolute;
+    width: 220px;
+    height: 1px;
+    content: "";
+    left: 0;
+    bottom: -15px;
+    background-color: var(--main-dark-div-color);
+}
+
+/* .trust-content__line {
     position: absolute;
     bottom: 105px;
     width: 221px;
     height: 1px;
     background-color: var(--main-dark-div-color);
-}
+} */
 
 .trust-list {
-    width: 233px;
-    height: 23px;
-    margin-top: 31px;
     display: grid;
-    grid-template-columns: repeat(3, 233px);
-    grid-row: 1 / span 3;
-    grid-column: 1 / span 3;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-row: 1 / span 3;
+    grid-column: 1 / span 3; */
     list-style-type: none;
     gap: 10px 20px;
 }
@@ -406,6 +412,7 @@ html {
 
 .trust-right {
     max-width: 360px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -427,17 +434,11 @@ html {
     color: #fff;
 }
 
-.trust-right__button {
-    width: 262px;
-    height: 44px;
-}
-
 .bestworks {
     background: linear-gradient(var(--main-dark-color) 50%, var(--main-light-bg-color) 50%);
 }
 
 .bestworks__container {
-    height: 730px;
     padding: 62px 82px;
     display: flex;
     flex-direction: column;
@@ -445,17 +446,14 @@ html {
 }
 
 .bestworks-top {
-    width: 932px;
-    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 48px;
+    column-gap: 48px;
 }
 
 .bestworks-top__info {
-    width: 417px;
-    height: 98px;
+    max-width: 417px;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.7;
@@ -470,12 +468,11 @@ html {
 }
 
 .bestworks-top__heading {
-    width: 419px;
-    height: 100px;
+    max-width: 419px;
 }
 
-.heading__text {
-    margin-bottom: 27px;
+.heading__subtitle {
+    margin-bottom: 15px;
     font-size: 16px;
     font-weight: 800;
     text-transform: uppercase;
@@ -497,9 +494,10 @@ html {
 }
 
 .bestworks-list__item {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
+    flex: 1 1 0;
     background-color: #fff;
     border-bottom: 3px solid var(--main-light-disabled-color);
     text-decoration: none;
@@ -512,6 +510,10 @@ html {
 
 .bestwork__img-wrapper {
     position: relative;
+}
+
+.items-img {
+    width: 100%;
 }
 
 .items-img>img {
