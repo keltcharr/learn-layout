@@ -54,15 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // проба попап
-  const openPopunBtn = document.querySelector("#btn-popup");
-  const modal = document.querySelector("#my-modal");
-  const closeBtn = document.querySelector("#modal-close__btn");
+  const modal = document.getElementById("#modal");
+  const modalOpener = document.querySelector("")
 
-  openPopunBtn.addEventListener("click", function() {
-      modal.classList.add("modal-popup--visible");
-  })
-
-  closeBtn.addEventListener("click", function() {
-      modal.classList.remove("modal-popup--visible");
-  })
 });

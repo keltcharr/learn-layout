@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -126,7 +126,7 @@
         <div class="container">
           <div class="hero__container">
             <div class="swiper hero__slider">
-              <div class="hero__slider-content">
+              <!-- <div class="hero__slider-content">
                 <h1 class="slider-content__title">Woodhouse</h1>
                 <div class="slider-content__subtitle-wripper">
                   <h2 class="slider-content__subtitle">
@@ -135,13 +135,13 @@
                 </div>
                 <div class="slider-content__text-wripper">
                   <p class="slider-content__text">
-                    Разработка и реализация красивых интерьеров из дерева
-                    ещё никогда не была так доступна. Интерьеры из дерева
-                    различной породы сделают ваш дом уютным и тёплым,
-                    радуя вас и ваших гостей.
+                    Разработка и реализация красивых интерьеров из дерева ещё
+                    никогда не была так доступна. Интерьеры из дерева различной
+                    породы сделают ваш дом уютным и тёплым, радуя вас и ваших
+                    гостей.
                   </p>
                 </div>
-              </div>
+              </div> -->
               <div class="swiper-wrapper">
                 <div class="swiper-slide hero__slide">
                   <div class="hero__slide-wrapper">
@@ -261,64 +261,9 @@
                 течение 10 минут.
               </div>
               <div class="trust-right__phone">+7 (499) 246-75-32</div>
-              <button class="button" id="btn-popup">
+              <button class="button" id="">
                 Оформить заявку сейчас
               </button>
-              <div class="modal-popup" id="my-modal">
-                <div class="modal-popup__container">
-                  <form action="" class="modal-popup__form">
-                    <div class="modal-popup__heading">
-                      <h2 class="modal-popup__title">Я попап форма</h2>
-                      <button
-                        class="modal-popup__close-btn"
-                        id="modal-close__btn"
-                      >
-                        &times;
-                      </button>
-                    </div>
-                    <p class="modal-popup__text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consequuntur, rerum nobis impedit voluptatem expedita nam.
-                      Non quae ducimus, minima inventore molestias officia neque
-                      molestiae mollitia consectetur quos tenetur nam rem!
-                    </p>
-                    <div class="modal-popup__input-list">
-                      <label for="username" class="modal-popup__label"
-                        >Имя
-                      </label>
-                      <input
-                        type="text"
-                        class="modal-popup__inpit"
-                        name="username"
-                        id="username"
-                      />
-
-                      <label for="user-tel" class="modal-popup__label"
-                        >Телефон
-                      </label>
-                      <input
-                        type="tel"
-                        class="modal-popup__inpit"
-                        name="user-tel"
-                        id="user-tel"
-                      />
-
-                      <label for="user-email" class="modal-popup__label"
-                        >Email
-                      </label>
-                      <input
-                        type="email"
-                        class="modal-popup__inpit"
-                        name="user-email"
-                        id="user-email"
-                      />
-                    </div>
-                    <button type="button" class="modal-popup__btn">
-                      Отправить
-                    </button>
-                  </form>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -732,6 +677,57 @@
         </div>
       </div>
     </footer>
+    <dialog class="modal" aria-label="application-form" id="modal">
+      <div class="modal__wripper">
+        <button class="modal__close-button" type="button">&times;</button>
+        <h2 class="modal__heading">Я попап форма</h2>
+        <div class="modal__content">
+          <p class="modal__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum nobis impedit
+            voluptatem expedita nam. Non quae ducimus, minima inventore molestias officia neque molestiae
+            mollitia consectetur quos tenetur nam rem!
+        </p>
+          <form action="" class="modal__form">
+            <div class="modal__form-container">
+              <label for="name">ФИО</label>
+              <input type="text" id="name">
+              <label for="number">Номер телефона</label>
+              <input type="text" id="number">
+              <label for="email">Почта</label>
+              <input type="text" id="email">
+            </div>
+            <button class="modal__submit-button" type="button">Отправить</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </dialog>
+      <!-- <div class="modal-popup" id="my-modal">
+                <button type="button" class="modal-popup__close-btn" id="modal-close__btn">&times;</button>
+                <div class="modal-popup__container">
+                    <div class="modal-popup__heading">
+                        <h2 class="modal-popup__title">Я попап форма</h2>
+                    </div>
+                    <p class="modal-popup__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum nobis impedit
+                        voluptatem expedita nam. Non quae ducimus, minima inventore molestias officia neque molestiae
+                        mollitia consectetur quos tenetur nam rem!
+                    </p>
+                    <form class="modal-popup__form" id="my-modal-form">
+                        <div class="modal-popup__input-list">
+                            <label for="username" class="modal-popup__label">Имя </label>
+                            <input type="text" class="modal-popup__inpit" name="username" id="username" />
+
+                            <label for="user-tel" class="modal-popup__label">Телефон </label>
+                            <input type="tel" class="modal-popup__inpit" name="user-tel" id="user-tel" />
+
+                            <label for="user-email" class="modal-popup__label">Email </label>
+                            <input type="email" class="modal-popup__inpit" name="user-email" id="user-email" />
+                        </div>
+                        <button type="submit" class="modal-popup__btn">Отправить</button>
+                    </form>
+                </div>
+            </div> -->
     <button class="scroll-up" id="scroll-up">
       <i class="scroll-up__icon">
         <svg
