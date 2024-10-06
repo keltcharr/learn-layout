@@ -29,6 +29,9 @@ const swiper = new Swiper('.swiper', {
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("#header");
   const scrollUp = document.querySelector("#scroll-up");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const mobileMenuOpenBtn = document.querySelector("#header-menu-mobile__button");
+  const mobileMenuCloseBtn = document.querySelector("#mobile-menu__close-button");
 
   if (window.scrollY > 100) {
     header.classList.add("header--sticky");
@@ -48,8 +51,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     scrollUp.addEventListener("click", function () {
-      console.log(window);
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+//mobileMenuBtn.addEventListener("click", function () {
+//   if (!mobileMenu.classList.contains("mobile-menu--is-open")) {
+//       mobileMenu.classList.add("mobile-menu--is-open");
+//   }
+// });
+
+// mobileMenuCloseBtn.addEventListener("click", function () {
+//   if (mobileMenu.classList.contains("mobile-menu--is-open")) {
+//       mobileMenu.classList.remove("mobile-menu--is-open");
+//   }
+// });
+
+  mobileMenuOpenBtn.addEventListener("click", function () {
+      if (!mobileMenu.classList.contains("mobile-menu--is-open")) {
+        mobileMenu.classList.add("mobile-menu--is-open");
+      }
+    });
+   
+    mobileMenuCloseBtn.addEventListener("click", function () {
+      if (mobileMenu.classList.contains("mobile-menu--is-open")) {
+        mobileMenu.classList.remove("mobile-menu--is-open");
+      }
     });
   });
 
