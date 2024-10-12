@@ -29,6 +29,9 @@ const swiper = new Swiper('.swiper', {
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("#header");
   const scrollUp = document.querySelector("#scroll-up");
+  const modal = document.getElementById("modal");
+  const modalOpenerBtn = document.querySelector("#trust-button__open-modal");
+  const modalCloserBtn = document.querySelector("#modal__close-button");
   const mobileMenu = document.querySelector("#mobile-menu");
   const mobileMenuOpenBtn = document.querySelector("#header-menu-mobile__button");
   const mobileMenuCloseBtn = document.querySelector("#mobile-menu__close-button");
@@ -53,34 +56,57 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollUp.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
-//mobileMenuBtn.addEventListener("click", function () {
-//   if (!mobileMenu.classList.contains("mobile-menu--is-open")) {
-//       mobileMenu.classList.add("mobile-menu--is-open");
-//   }
-// });
-
-// mobileMenuCloseBtn.addEventListener("click", function () {
-//   if (mobileMenu.classList.contains("mobile-menu--is-open")) {
-//       mobileMenu.classList.remove("mobile-menu--is-open");
-//   }
-// });
-
-  mobileMenuOpenBtn.addEventListener("click", function () {
-      if (!mobileMenu.classList.contains("mobile-menu--is-open")) {
-        mobileMenu.classList.add("mobile-menu--is-open");
-      }
-    });
-   
-    mobileMenuCloseBtn.addEventListener("click", function () {
-      if (mobileMenu.classList.contains("mobile-menu--is-open")) {
-        mobileMenu.classList.remove("mobile-menu--is-open");
-      }
-    });
   });
 
+  function closeOnBackDropClick({ currentTarget, target }) {
+    const modal = currentTarget
+    const isClickedOnBackDrop = target === modal
+    if (isClickedOnBackDrop) {
+      closeModalAndReturnScroll()
+    }
+  }
+  
+  function openModalAndLockScroll () {
+    modal.showModal();
+    document.body.classList.add("scroll--lock")
+  }
+
+  function returnScroll() {
+    document.body.classList.remove("scroll--lock")
+  }
+
+  function closeModalAndReturnScroll() {
+    modal.close()
+    returnScroll()
+  }
+
+  modal.addEventListener('click', closeOnBackDropClick)
+  modal.addEventListener('cancel', (event) => {
+    returnScroll()
+  });
+  modalOpenerBtn.addEventListener('click', openModalAndLockScroll)
+  modalCloserBtn.addEventListener('click', (event) => {
+    event.stopPropagation()
+    closeModalAndReturnScroll()
+  })
+
+
+mobileMenuOpenBtn.addEventListener("click", function () {
+  if (!mobileMenu.classList.contains("mobile-menu--is-open")) {
+    mobileMenu.classList.add("mobile-menu--is-open");
+  }
+});
+
+mobileMenuCloseBtn.addEventListener("click", function () {
+  if (mobileMenu.classList.contains("mobile-menu--is-open")) {
+    mobileMenu.classList.remove("mobile-menu--is-open");
+  }
+});
+
   // проба попап
-  const modal = document.getElementById("#modal");
-  const modalOpener = document.querySelector("")
+  // const modal = document.getElementById("#modal");
+  // const modalOpener = document.querySelector("")
+
+
 
 });

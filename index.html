@@ -279,7 +279,7 @@
                 течение 10 минут.
               </div>
               <div class="trust-right__phone">+7 (499) 246-75-32</div>
-              <button class="button" id="">Оформить заявку сейчас</button>
+              <button class="button" id="trust-button__open-modal">Оформить заявку сейчас</button>
             </div>
           </div>
         </div>
@@ -693,7 +693,7 @@
     </footer>
     <dialog class="modal" aria-label="application-form" id="modal">
       <div class="modal__wripper">
-        <button class="modal__close-button" type="button">&times;</button>
+        <button class="modal__close-button" type="button" id="modal__close-button">&times;</button>
         <h2 class="modal__heading">Я попап форма</h2>
         <div class="modal__content">
           <p class="modal__text">
@@ -708,11 +708,11 @@
             <label for="name">ФИО</label>
             <input type="text" id="name" />
             <label for="number">Номер телефона</label>
-            <input type="text" id="number" />
+            <input type="tel" id="number" />
             <label for="email">Почта</label>
-            <input type="text" id="email" />
+            <input type="email" id="email" />
           </div>
-          <button class="modal__submit-button" type="button">Отправить</button>
+          <button class="modal__submit-button button" type="submit">Отправить</button>
         </form>
       </div>
     </dialog>

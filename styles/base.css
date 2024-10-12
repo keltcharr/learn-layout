@@ -59,6 +59,10 @@ html {
     cursor: pointer;
 }
 
+.scroll--lock {
+    overflow: hidden;
+}
+
 .header__container {
     padding: 40px 80px 27px 80px;
     display: flex;
@@ -141,9 +145,9 @@ html {
     color: rgba(255 255 255/0.7);
 }
 
-.mobile-menu {
+/* .mobile-menu {
     display: none;
-}
+} */
 
 .header__social {
     padding: 5px 15px;
@@ -1196,7 +1200,7 @@ html {
 
 .modal {
     position: fixed;
-    max-width: 500px;
+    width: 550px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1206,7 +1210,7 @@ html {
 }
 
 dialog::backdrop {
-    color: rgba(0 0 0/0.7);
+    background-color: rgba(0 0 0/0.7);
 }
 
 .modal__wripper {
@@ -1227,9 +1231,25 @@ dialog::backdrop {
     margin-bottom: 15px;
 }
 
+.modal__text {
+    margin-bottom: 10px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
 .modal__form-container {
     display: flex;
     flex-direction: column;
+    row-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.modal__form-container>input{
     margin-bottom: 10px;
 }
 
@@ -1237,6 +1257,12 @@ dialog::backdrop {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.modal__submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1407,6 +1433,7 @@ dialog::backdrop {
     .footer-social {
         margin-top: 20px;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1433,7 +1460,7 @@ dialog::backdrop {
     }
 
     .mobile-menu--is-open {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 
     .mobile-menu__close-button {
@@ -1515,6 +1542,11 @@ dialog::backdrop {
 
     .trust-list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .modal {
+        width: 80vw;
     }
 
     .bestworks-top__line {
