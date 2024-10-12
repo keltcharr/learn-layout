@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="./styles/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <script src="./styles/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./js/sliderScript.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <div class="header container">
+    <header class="header container" id="header">
       <div class="header__container">
         <div class="logo header__logo">
           <i class="logo__icon">
@@ -84,6 +84,23 @@
             >Проекты</a
           >
         </div>
+        <button class="header-menu-mobile__button" id="header-menu-mobile__button">
+          <i class="header-menu-mobile__icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </i>
+        </button>
         <div class="header__social">
           <a
             class="header__social-link"
@@ -120,391 +137,452 @@
         </div>
       </div>
       <div class="header__bottom-line"></div>
-    </div>
-    <!-- Нужно доделать слайдер и текст с кнопками на первом экране -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero__container">
-          <div class="swiper hero__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide hero__slide">
-                <div class="hero__slide-wrapper">
-                  <img
-                    class="hero__slide-img"
-                    src="./image/slider-img.jpg"
-                    alt="slide_1"
-                  />
-                  <div class="hero__slide-img-cover"></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__container">
+            <div class="swiper hero__slider">
+              <!-- <div class="hero__slider-content-wripper"> -->
+                <div class="hero__slider-content">
+                  <h1 class="slider-content__title">Woodhouse</h1>
+                  <div class="slider-content__subtitle-wripper">
+                    <h2 class="slider-content__subtitle">
+                      дизайн на высоком уровне
+                    </h2>
+                  </div>
+                  <div class="slider-content__text-wripper">
+                    <p class="slider-content__text">
+                      Разработка и реализация красивых интерьеров из дерева ещё
+                      никогда не была так доступна. Интерьеры из дерева различной
+                      породы сделают ваш дом уютным и тёплым, радуя вас и ваших
+                      гостей.
+                    </p>
+                  </div>
+                </div>
+              <!-- </div> -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hero__slide">
+                  <div class="hero__slide-wrapper">
+                    <img
+                      class="hero__slide-img"
+                      src="./image/slider-img.jpg"
+                      alt="slide_1"
+                    />
+                    <div class="hero__slide-img-cover"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide hero__slide">
+                  <!-- <div class="hero__slider-content">
+                    <h1 class="slider-content__title">Woodhouse</h1>
+                    <div class="slider-content__subtitle-wripper">
+                      <h2 class="slider-content__subtitle">
+                        дизайн на высоком уровне
+                      </h2>
+                    </div>
+                    <div class="slider-content__text-wripper">
+                      <p class="slider-content__text">
+                        Разработка и реализация красивых интерьеров из дерева
+                        ещё никогда не была так доступна. Интерьеры из дерева
+                        различной породы сделают ваш дом уютным и тёплым, радуя
+                        вас и ваших гостей.
+                      </p>
+                    </div>
+                  </div> -->
+                  <div class="hero_slide-wrapper">
+                    <img
+                      class="hero__slide-img"
+                      src="./image/slider-img.jpg"
+                      alt="slide_2"
+                    />
+                    <div class="hero__slide-img-cover"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide hero__slide">
+                  <!-- <div class="hero__slider-content">
+                    <h1 class="slider-content__title">Woodhouse</h1>
+                    <div class="slider-content__subtitle-wripper">
+                      <h2 class="slider-content__subtitle">
+                        дизайн на высоком уровне
+                      </h2>
+                    </div>
+                    <div class="slider-content__text-wripper">
+                      <p class="slider-content__text">
+                        Разработка и реализация красивых интерьеров из дерева
+                        ещё никогда не была так доступна. Интерьеры из дерева
+                        различной породы сделают ваш дом уютным и тёплым, радуя
+                        вас и ваших гостей.
+                      </p>
+                    </div>
+                  </div> -->
+                  <div class="hero_slide-wrapper">
+                    <img
+                      class="hero__slide-img"
+                      src="./image/slider-img.jpg"
+                      alt="slide_3"
+                    />
+                    <div class="hero__slide-img-cover"></div>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide hero__slide">
-                <div class="hero_slide-wrapper">
-                  <img
-                    class="hero__slide-img"
-                    src="./image/slider-img.jpg"
-                    alt="slide_2"
-                  />
-                  <div class="hero__slide-img-cover"></div>
+              <div class="slider-control hero__slider-control">
+                <div class="slider-num slider-control__item">
+                  <span class="slider-num__current">01</span>
+                  <span class="slider-num__divider"></span>
+                  <span class="slider-num__total">03</span>
                 </div>
-              </div>
-              <div class="swiper-slide hero__slide">
-                <div class="hero_slide-wrapper">
-                  <img
-                    class="hero__slide-img"
-                    src="./image/slider-img.jpg"
-                    alt="slide_3"
-                  />
-                  <div class="hero__slide-img-cover"></div>
+                <div class="slider-control__item">
+                  <div class="swiper-scrollbar"></div>
                 </div>
-              </div>
-            </div>
-            <div class="slider-control hero__slider-control">
-              <div class="slider__num">01|03</div>
-              <div class="slider-control__scrollbar">
-                <div class="swiper-scrollbar"></div>
-              </div>
-              <div class="slider-control__button">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="slider-control__item">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="trust">
-      <div class="trust__container container">
-        <div class="trust-content">
-          <div class="trust-content__header">Нам доверяют</div>
-          <div class="trust-content__line"></div>
-          <div class="trust-content__items">
-            <ul class="trust-list">
-              <li class="trust-list__item">
-                <span>860 </span>клиентов по всему миру
-              </li>
-              <li class="trust-list__item">
-                <span>23 </span>надёжных партнёна
-              </li>
-              <li class="trust-list__item"><span>12 </span>поставщиков</li>
-              <li class="trust-list__item"><span>36 </span>лучших франчайзи</li>
-              <li class="trust-list__item">
-                <span>108 </span>производителей мебели
-              </li>
-              <li class="trust-list__item"><span>85 </span>сотрудников</li>
-              <li class="trust-list__item">
-                <span>38 </span>пернатых попугаев
-              </li>
-              <li class="trust-list__item">
-                <span>256 </span>восьмибитных цветов
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="trust-right">
-          <div class="trust-right__information">
-            Позвоните нам или оставьте заявку с сайта.<br />Мы перезвоним вам в
-            течение 10 минут.
-          </div>
-          <div class="trust-right__phone">+7 (499) 246-75-32</div>
-          <button class="button trust-right__button">
-            Оформить заявку сейчас
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- У карточек товара нужно сделать подсвечиваемые точки -->
-    <section class="bestworks">
-      <div class="container">
-        <div class="bestworks__container">
-          <div class="bestworks-top">
-            <p class="bestworks-top__info">
-              Представляем вам лучшие проекты, разработанные нашей командой
-              профессионалов с любовью и заботой о клиентах. Портфолио позволит
-              вам выбрать интересующий стиль, цвет дерева, фактуру, дизайн и
-              расположение элементов.
-            </p>
-            <div class="bestworks-top__line"></div>
-            <div class="bestworks-top__heading">
-              <p class="heading__text">\\ Лучшие работы</p>
-              <h3 class="heading__header">
-                Создаём тёплую атмосферу вашего отдыха
-              </h3>
+      </section>
+      <section class="trust">
+        <div class="container">
+          <div class="trust__container">
+            <div class="trust-content">
+              <div class="trust-content__header">Нам доверяют</div>
+              <div class="trust-content__items">
+                <ul class="trust-list">
+                  <li class="trust-list__item">
+                    <span>860 </span>клиентов по всему миру
+                  </li>
+                  <li class="trust-list__item">
+                    <span>23 </span>надёжных партнёна
+                  </li>
+                  <li class="trust-list__item"><span>12 </span>поставщиков</li>
+                  <li class="trust-list__item">
+                    <span>36 </span>лучших франчайзи
+                  </li>
+                  <li class="trust-list__item">
+                    <span>108 </span>производителей мебели
+                  </li>
+                  <li class="trust-list__item"><span>85 </span>сотрудников</li>
+                  <li class="trust-list__item">
+                    <span>38 </span>пернатых попугаев
+                  </li>
+                  <li class="trust-list__item">
+                    <span>256 </span>восьмибитных цветов
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="trust-right">
+              <div class="trust-right__information">
+                Позвоните нам или оставьте заявку с сайта. Мы перезвоним вам в
+                течение 10 минут.
+              </div>
+              <div class="trust-right__phone">+7 (499) 246-75-32</div>
+              <button class="button" id="trust-button__open-modal">Оформить заявку сейчас</button>
             </div>
           </div>
-          <div class="bestworks-list">
-            <div class="bestworks-list__item">
-              <div class="bestwork__img-wrapper">
-                <div class="items__top-left-border"></div>
-                <div class="items__bottom-right-border"></div>
-                <img
-                  class="items-img"
-                  src="./image/bestwork/bg-image1.jpg"
-                  alt="bestwork-1"
-                />
+        </div>
+      </section>
+      <section class="bestworks">
+        <div class="container">
+          <div class="bestworks__container">
+            <div class="bestworks-top">
+              <p class="bestworks-top__info">
+                Представляем вам лучшие проекты, разработанные нашей командой
+                профессионалов с любовью и заботой о клиентах. <br />
+                Портфолио позволит вам выбрать интересующий стиль, цвет дерева,
+                фактуру, дизайн и расположение элементов.
+              </p>
+              <div class="bestworks-top__line"></div>
+              <div class="bestworks-top__heading">
+                <p class="heading__subtitle">\\ Лучшие работы</p>
+                <h3 class="heading__header">
+                  Создаём тёплую атмосферу вашего отдыха
+                </h3>
               </div>
-              <div class="items-info">
-                <div class="items-map">
-                  <i class="items-map__icon"> </i>
-                  <p class="items-map__address">
-                    Санкт-Петербург, Английский Пр.
+            </div>
+            <div class="bestworks-list">
+              <a class="bestworks-list__item" href="#">
+                <div class="bestwork__img-wrapper">
+                  <div class="items__top-left-border"></div>
+                  <div class="items__bottom-right-border"></div>
+                  <div class="items-img">
+                    <img
+                      src="./image/bestwork/bg-image1.jpg"
+                      alt="bestwork-1"
+                    />
+                  </div>
+                </div>
+                <div class="items-info">
+                  <div class="items-map">
+                    <i class="items-map__icon"> </i>
+                    <p class="items-map__address">
+                      Санкт-Петербург, Английский Пр.
+                    </p>
+                  </div>
+                  <div class="items-heading">
+                    <i class="items-heading__icon"> </i>
+                    <h3 class="items-heading__header">
+                      Современная гостиная в древесных тонах
+                    </h3>
+                  </div>
+                </div>
+              </a>
+              <a class="bestworks-list__item" href="#">
+                <div class="bestwork__img-wrapper">
+                  <div class="items__top-left-border"></div>
+                  <div class="items__bottom-right-border"></div>
+                  <div class="items-img">
+                    <img
+                      src="./image/bestwork/bg-image2.png"
+                      alt="bestwork-2"
+                    />
+                  </div>
+                </div>
+                <div class="items-info">
+                  <div class="items-map">
+                    <i class="items-map__icon"> </i>
+                    <p class="items-map__address">
+                      Москва, Рублево-Успенское Ш.
+                    </p>
+                  </div>
+                  <div class="items-heading">
+                    <i class="items-heading__icon"> </i>
+                    <h3 class="items-heading__header">
+                      Панорамная чилаут зона для чтения и отдыха
+                    </h3>
+                  </div>
+                </div>
+              </a>
+              <a class="bestworks-list__item" href="#">
+                <div class="bestwork__img-wrapper">
+                  <div class="items__top-left-border"></div>
+                  <div class="items__bottom-right-border"></div>
+                  <div class="items-img">
+                    <img
+                      src="./image/bestwork/bg-image3.png"
+                      alt="bestwork-3"
+                    />
+                  </div>
+                </div>
+                <div class="items-info">
+                  <div class="items-map">
+                    <i class="items-map__icon"> </i>
+                    <p class="items-map__address">Москва, На Якиманке</p>
+                  </div>
+                  <div class="items-heading">
+                    <i class="items-heading__icon"> </i>
+                    <h3 class="items-heading__header">
+                      Уютный лофт в светлых древесных тонах
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="bestwork__link-wrapper">
+              <a class="link" href="#">Показать ещё</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <div class="about__container">
+            <div class="about-left">
+              <div class="about-left__decor"></div>
+              <img
+                class="about-left__img"
+                src="./image/about-img.png"
+                alt="about-img"
+              />
+              <div class="about-left__benefit">
+                <p class="about-left__benefit-year">32</p>
+                <p class="about-left__benefit-info">
+                  года<br />
+                  на рынке
+                </p>
+              </div>
+            </div>
+            <div class="about-right">
+              <div class="about__heading">
+                <p class="about__heading-text">\\ Коротко о нас</p>
+                <h3 class="about__heading-header">
+                  Проектируем и создаём экологичный комфорт
+                </h3>
+              </div>
+              <div class="about__divider">
+                <i class="about__dot-decor"></i>
+              </div>
+              <p class="about__info">
+                В работе мы используем только лучшие материалы на рынке по
+                доступным ценам. Наши специалисты подберут наиболее подходящие
+                породы дерева, специалисты по дизайну разработают готовое
+                решение.
+              </p>
+              <div class="about__items-wripper">
+                <div class="about-item">
+                  <div class="about-item__heading">
+                    <img
+                      class="about-item__icon"
+                      src="./image/icons/eco.svg"
+                      alt="eco"
+                    />
+                    <h3 class="about-item__header">Безопасные материалы</h3>
+                  </div>
+                  <div class="about-item__line"></div>
+                  <p class="about-item__info">
+                    Безопасность каждого из используемых материалов
+                    подтверждается соответствующим сертификатом европейского
+                    стандарта. Мы используем продукцию только проверенных годами
+                    брендов.
+                  </p>
+                  <a class="about-item__link" href="#">Подробнее</a>
+                </div>
+                <div class="about-item">
+                  <div class="about-item__heading">
+                    <img
+                      class="about-item__icon"
+                      src="./image/icons/wood-cut.svg"
+                      alt="wood-cut"
+                    />
+                    <h3 class="about-item__header">Качественная древесина</h3>
+                  </div>
+                  <div class="about-item__line"></div>
+                  <p class="about-item__info">
+                    В создании неповторимых интерьеров мы используем только
+                    качественную, проверенную европейскую древесину, которая
+                    будет служить вам долгие годы, сохраняя свои качества и
+                    безупречный внешний вид.
+                  </p>
+                  <a class="about-item__link" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="container">
+          <div class="partners__container">
+            <div class="partners-bg"></div>
+            <div class="partners__content">
+              <h2 class="partners-header">Наши партнёры</h2>
+              <div class="partners__items-wripper">
+                <div class="partners-item">
+                  <div class="partners-logo__wripper">
+                    <img
+                      class="partners-logo"
+                      src="./image/brands/milano 1.png"
+                      alt="Milano Parquet S.R.L."
+                    />
+                  </div>
+                  <p class="partners-info">
+                    <span>Milano Parquet S.R.L.</span> Мы заботимся о древесине
+                    и тщательно следим за всем производственным процессом.
                   </p>
                 </div>
-                <div class="items-heading">
-                  <i class="items-heading__icon"> </i>
-                  <h3 class="items-heading__header">
-                    Современная гостиная в древесных тонах
+                <div class="partners-item">
+                  <div class="partners-logo__wripper">
+                    <img
+                      class="partners-logo"
+                      src="./image/brands/mazzucato 1.png"
+                      alt="Mazzucato Legnami"
+                    />
+                  </div>
+                  <p class="partners-info">
+                    <span>Mazzucato Legnami</span> - итальянский производитель
+                    древесины, крупнейший лидер рынка в Европе.
+                  </p>
+                </div>
+                <div class="partners-item">
+                  <div class="partners-logo__wripper">
+                    <img
+                      class="partners-logo"
+                      src="./image/brands/fanfani 1.png"
+                      alt="Andrea Fanfani"
+                    />
+                  </div>
+                  <p class="partners-info">
+                    <span>Andrea Fanfani</span> создаёт уникальную итальянскую
+                    мебель ручной работы, как продолжение вашего интерьера.
+                  </p>
+                </div>
+                <div class="partners-item">
+                  <div class="partners-logo__wripper">
+                    <img
+                      class="partners-logo"
+                      src="./image/brands/cappelini 1.png"
+                      alt="Angelo Cappelini"
+                    />
+                  </div>
+                  <p class="partners-info">
+                    <span>Angelo Cappelini</span> воспроизводит мебель ушедших
+                    эпох: ампир, барокко, рококо и многие другие.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container">
+          <div class="blog__container">
+            <h2 class="blog__title">Наш блог</h2>
+            <div class="blog__list">
+              <div class="blog__item">
+                <div class="blog__img-wripper">
+                  <div class="blog__date">12 июля</div>
+                  <img
+                    class="blog__img"
+                    src="./image/blogs/blog-img-12.07.png"
+                    alt="blog-img-12.07"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="blog__item-content">
+                  <h3 class="blog__heading">
+                    Построили потрясающую деревянную лестницу
                   </h3>
+                  <p class="blog__text">
+                    Один из самых необыкновенных проектов нашей компании -
+                    винтовая деревянная лестница в старинном стиле.
+                  </p>
+                  <a class="blog__link" href="">Читать полностью</a>
                 </div>
               </div>
-            </div>
-            <div class="bestworks-list__item">
-              <div class="bestwork__img-wrapper">
-                <div class="items__top-left-border"></div>
-                <div class="items__bottom-right-border"></div>
-                <img
-                  class="items-img"
-                  src="./image/bestwork/bg-image2.png"
-                  alt="bestwork-2"
-                />
-              </div>
-              <div class="items-info">
-                <div class="items-map">
-                  <i class="items-map__icon"> </i>
-                  <p class="items-map__address">Москва, Рублево-Успенское Ш.</p>
+              <div class="blog__item">
+                <div class="blog__img-wripper">
+                  <div class="blog__date">02 июля</div>
+                  <img
+                    class="blog__img"
+                    src="./image/blogs/blog-img-02.07.png"
+                    alt="blog-img-02.07.png"
+                  />
                 </div>
-                <div class="items-heading">
-                  <i class="items-heading__icon"> </i>
-                  <h3 class="items-heading__header">
-                    Панорамная чилаут зона для чтения и отдыха
+                <div class="blog__item-content">
+                  <h3 class="blog__heading">
+                    Создание деревянной футуристичной спальни
                   </h3>
+                  <p class="blog__text">
+                    Создание уникальнейшего проекта - деревянной спальни в
+                    футуристичком стиле заняло у команды Woodtech два месяца.
+                  </p>
+                  <a class="blog__link" href="">Читать полностью</a>
                 </div>
               </div>
-            </div>
-            <div class="bestworks-list__item">
-              <div class="bestwork__img-wrapper">
-                <div class="items__top-left-border"></div>
-                <div class="items__bottom-right-border"></div>
-                <img
-                  class="items-img"
-                  src="./image/bestwork/bg-image3.png"
-                  alt="bestwork-3"
-                />
-              </div>
-              <div class="items-info">
-                <div class="items-map">
-                  <i class="items-map__icon"> </i>
-                  <p class="items-map__address">Москва, На Якиманке</p>
+              <a class="blog__item" href="#">
+                <div class="blog__item-bg">
+                  <img src="./image/blogs/blog-bg.png" alt="blog-bg.png" />
+                  <p class="blog-link__text">Перейти ко всем записям блога</p>
                 </div>
-                <div class="items-heading">
-                  <i class="items-heading__icon"> </i>
-                  <h3 class="items-heading__header">
-                    Уютный лофт в светлых древесных тонах
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bestwork__link-wrapper">
-            <a class="link" href="#">Показать ещё</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="about">
-      <div class="container">
-        <div class="about__container">
-          <div class="about-left">
-            <div class="about-left__decor"></div>
-            <img
-              class="about-left__img"
-              src="./image/about-img.png"
-              alt="about-img"
-            />
-            <div class="about-left__benefit">
-              <p class="about-left__benefit-year">32</p>
-              <p class="about-left__benefit-info">
-                года<br />
-                на рынке
-              </p>
-            </div>
-          </div>
-          <div class="about-right">
-            <div class="about__heading">
-              <p class="about__heading-text">\\ Коротко о нас</p>
-              <h3 class="about__heading-header">
-                Проектируем и создаём <br />экологичный комфорт
-              </h3>
-            </div>
-            <div class="about__divider">
-              <i class="about__dot-decor"></i>
-            </div>
-            <p class="about__info">
-              В работе мы используем только лучшие материалы на рынке по
-              доступным ценам. Наши специалисты подберут наиболее подходящие
-              породы дерева, специалисты по дизайну разработают готовое решение.
-            </p>
-            <div class="about__items-wripper">
-              <div class="about-item">
-                <div class="about-item__heading">
-                  <img
-                    class="about-item__icon"
-                    src="./image/icons/eco.svg"
-                    alt="eco"
-                  />
-                  <h3 class="about-item__header">Безопасные материалы</h3>
-                </div>
-                <div class="about-item__line"></div>
-                <p class="about-item__info">
-                  Безопасность каждого из используемых материалов подтверждается
-                  соответствующим сертификатом европейского стандарта. Мы
-                  используем продукцию только проверенных годами брендов.
-                </p>
-                <a class="about-item__link" href="#">Подробнее</a>
-              </div>
-              <div class="about-item">
-                <div class="about-item__heading">
-                  <img
-                    class="about-item__icon"
-                    src="./image/icons/wood-cut.svg"
-                    alt="wood-cut"
-                  />
-                  <h3 class="about-item__header">Качественная древесина</h3>
-                </div>
-                <div class="about-item__line"></div>
-                <p class="about-item__info">
-                  В создании неповторимых интерьеров мы используем только
-                  качественную, проверенную европейскую древесину, которая будет
-                  служить вам долгие годы, сохраняя свои качества и безупречный
-                  внешний вид.
-                </p>
-                <a class="about-item__link" href="#">Подробнее</a>
-              </div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="partners">
-      <div class="container">
-        <div class="partners__container">
-          <div class="partners-bg"></div>
-          <div class="partners__content">
-            <h2 class="partners-header">Наши партнёры</h2>
-            <div class="partners__items-wripper">
-              <div class="partners-item">
-                <div class="partners-logo__wripper">
-                  <img
-                    class="partners-logo"
-                    src="./image/brands/milano 1.png"
-                    alt="Milano Parquet S.R.L."
-                  />
-                </div>
-                <p class="partners-info">
-                  <span>Milano Parquet S.R.L.</span> Мы заботимся о древесине и
-                  тщательно следим за всем производственным процессом.
-                </p>
-              </div>
-              <div class="partners-item">
-                <div class="partners-logo__wripper">
-                  <img
-                    class="partners-logo"
-                    src="./image/brands/mazzucato 1.png"
-                    alt="Mazzucato Legnami"
-                  />
-                </div>
-                <p class="partners-info">
-                  <span>Mazzucato Legnami</span> - итальянский производитель
-                  древесины, крупнейший лидер рынка в Европе.
-                </p>
-              </div>
-              <div class="partners-item">
-                <div class="partners-logo__wripper">
-                  <img
-                    class="partners-logo"
-                    src="./image/brands/fanfani 1.png"
-                    alt="Andrea Fanfani"
-                  />
-                </div>
-                <p class="partners-info">
-                  <span>Andrea Fanfani</span> создаёт уникальную итальянскую
-                  мебель ручной работы, как продолжение вашего интерьера.
-                </p>
-              </div>
-              <div class="partners-item">
-                <div class="partners-logo__wripper">
-                  <img
-                    class="partners-logo"
-                    src="./image/brands/cappelini 1.png"
-                    alt="Angelo Cappelini"
-                  />
-                </div>
-                <p class="partners-info">
-                  <span>Angelo Cappelini</span> воспроизводит мебель ушедших
-                  эпох: ампир, барокко, рококо и многие другие.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="blog">
-      <div class="container">
-        <div class="blog__container">
-          <h2 class="blog__title">Наш блог</h2>
-          <div class="blog__list">
-            <div class="blog__item">
-              <div class="blog__img-wripper">
-                <div class="blog__date">12 июля</div>
-                <img
-                  class="blog__img"
-                  src="./image/blogs/blog-img-12.07.png"
-                  alt="blog-img-12.07"
-                />
-              </div>
-              <div class="blog__item-content">
-                <h3 class="blog__heading">
-                  Построили потрясающую деревянную лестницу
-                </h3>
-                <p class="blog__text">
-                  Один из самых необыкновенных проектов нашей компании -
-                  винтовая деревянная лестница в старинном стиле.
-                </p>
-                <a class="blog__link" href="">Читать полностью</a>
-              </div>
-            </div>
-            <div class="blog__item">
-              <div class="blog__img-wripper">
-                <div class="blog__date">02 июля</div>
-                <img
-                  class="blog__img"
-                  src="./image/blogs/blog-img-02.07.png"
-                  alt="blog-img-02.07.png"
-                />
-              </div>
-              <div class="blog__item-content">
-                <h3 class="blog__heading">
-                  Создание деревянной футуристичной спальни
-                </h3>
-                <p class="blog__text">
-                  Создание уникальнейшего проекта - деревянной спальни в
-                  футуристичком стиле заняло у команды Woodtech два месяца.
-                </p>
-                <a class="blog__link" href="">Читать полностью</a>
-              </div>
-            </div>
-            <a class="blog__item" href="#">
-              <div class="blog__item-bg">
-                <img src="./image/blogs/blog-bg.png" alt="blog-bg.png" />
-                <p class="blog-link__text">
-                  Перейти ко всем<br />записям блога
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
@@ -563,7 +641,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="footer-services__item">
+              <div class="footer-menu__item">
                 <h3 class="footer__title">Услуги</h3>
                 <ul class="footes__links-list">
                   <li class="footer__links-item">
@@ -613,5 +691,73 @@
         </div>
       </div>
     </footer>
+    <dialog class="modal" aria-label="application-form" id="modal">
+      <div class="modal__wripper">
+        <button class="modal__close-button" type="button" id="modal__close-button">&times;</button>
+        <h2 class="modal__heading">Я попап форма</h2>
+        <div class="modal__content">
+          <p class="modal__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, rerum nobis impedit voluptatem expedita nam. Non quae
+            ducimus, minima inventore molestias officia neque molestiae mollitia
+            consectetur quos tenetur nam rem!
+          </p>
+        </div>
+        <form action="" class="modal__form">
+          <div class="modal__form-container">
+            <label for="name">ФИО</label>
+            <input type="text" id="name" />
+            <label for="number">Номер телефона</label>
+            <input type="tel" id="number" />
+            <label for="email">Почта</label>
+            <input type="email" id="email" />
+          </div>
+          <button class="modal__submit-button button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </dialog>
+    <button class="scroll-up" id="scroll-up">
+      <i class="scroll-up__icon">
+        <svg
+          width="15"
+          height="9"
+          viewBox="0 0 15 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.477404 6.82886L6.76641 0.389946C6.81742 0.337218 6.87851 0.29529 6.94605 0.266655C7.01359 0.23802 7.0862 0.223263 7.15956 0.223263C7.23292 0.223263 7.30553 0.23802 7.37308 0.266655C7.44062 0.29529 7.50171 0.337219 7.55271 0.389946C7.65727 0.497784 7.71574 0.642087 7.71574 0.792289C7.71574 0.942492 7.65727 1.0868 7.55271 1.19463L1.26371 7.63355C1.2127 7.68627 1.15161 7.7282 1.08407 7.75684C1.01653 7.78547 0.943916 7.80023 0.870555 7.80023C0.797194 7.80023 0.724583 7.78547 0.657042 7.75684C0.589501 7.7282 0.52841 7.68627 0.477404 7.63355C0.372848 7.52571 0.314378 7.38141 0.314378 7.2312C0.314378 7.081 0.372848 6.9367 0.477404 6.82886Z"
+            fill="white"
+          />
+          <path
+            d="M13.0498 7.63335L6.76081 1.19444C6.65625 1.0866 6.59778 0.942295 6.59778 0.792092C6.59778 0.64189 6.65625 0.497587 6.76081 0.389749C6.81182 0.337022 6.87291 0.295092 6.94045 0.266457C7.00799 0.237822 7.0806 0.223065 7.15396 0.223066C7.22732 0.223066 7.29993 0.237822 7.36747 0.266457C7.43501 0.295092 7.49611 0.337021 7.54711 0.389749L13.8361 6.82866C13.9405 6.93668 13.9987 7.08109 13.9984 7.23129C13.9982 7.3815 13.9395 7.5257 13.8347 7.63335C13.7837 7.68586 13.7227 7.7276 13.6553 7.75611C13.5879 7.78462 13.5155 7.7993 13.4423 7.7993C13.3691 7.7993 13.2966 7.78462 13.2292 7.75611C13.1618 7.7276 13.1008 7.68586 13.0498 7.63335Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+    </button>
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="mobile-menu__close-button" id="mobile-menu__close-button">
+        <i class="mobile-menu__close-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+              fill="currentColor"
+            />
+          </svg>
+        </i>
+      </button>
+      <div class="mobile__menu-links">
+        <a class="mobile__menu-link" href="#" rel="noopener noreferrer">Главная</a>
+        <a class="mobile__menu-link" href="#" rel="noopener noreferrer">Услуги</a>
+        <a class="mobile__menu-link" href="#" rel="noopener noreferrer">Блог</a>
+        <a class="mobile__menu-link" href="#" rel="noopener noreferrer"
+          >Компания</a
+        >
+        <a class="mobile__menu-link" href="#" rel="noopener noreferrer"
+          >Проекты</a
+        >
+      </div>
+    </div>
   </body>
 </html>
